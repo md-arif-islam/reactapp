@@ -1,13 +1,21 @@
 import ClickCounter from './components/ClickCounter';
+import Counter from './components/Counter';
 import HoverCounter from './components/HoverCounter';
-import KeyPressCounter from './components/KeyPressCounter';
 
 function App() {
     return (
         <div className="app">
-            <ClickCounter />
-            <HoverCounter />
-            <KeyPressCounter />
+            <Counter
+                render={(count, incrementCount) => (
+                    <ClickCounter count={count} incrementCount={incrementCount} />
+                )}
+            />
+
+            <Counter
+                render={(count, incrementCount) => (
+                    <HoverCounter count={count} incrementCount={incrementCount} />
+                )}
+            />
         </div>
     );
 }
