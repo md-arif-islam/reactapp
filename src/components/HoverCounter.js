@@ -1,12 +1,16 @@
 import React from 'react';
 
-export default class HoverCounter extends React.Component {
-    render() {
-        const { count, incrementCount } = this.props;
-        return (
-            <div>
-                <h1 onMouseOver={incrementCount}>Hovered {count} time</h1>
-            </div>
-        );
-    }
+export default function HoverCounter({ count, incrementCount, theme, switchTheme }) {
+    const style = theme === 'dark' ? { backgroundColor: '#000000', color: '#ffffff' } : null;
+    console.log(style);
+    return (
+        <div>
+            <h1 style={style} onMouseOver={incrementCount}>
+                Hovered {count} time
+            </h1>
+            <button type="button" onClick={switchTheme}>
+                Shitch Theme
+            </button>
+        </div>
+    );
 }
