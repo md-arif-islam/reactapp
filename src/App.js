@@ -1,11 +1,9 @@
-import GetPost from './components/GetPost';
+import LayoutComponent from './components/LayoutComponent';
 
 export default function App() {
     return (
         <div className="app">
-            <div>
-                <GetPost />
-            </div>
+            <LayoutComponent />
         </div>
     );
 }
