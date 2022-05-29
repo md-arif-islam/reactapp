@@ -4,7 +4,10 @@
     "airbnb/hooks",
     "eslint:recommended",
     "prettier",
-    "plugin:jsx-a11y/recommended"
+    "plugin:jsx-a11y/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript"
   ],
   "parser": "babel-eslint",
   "parserOptions": {
